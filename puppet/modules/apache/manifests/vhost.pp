@@ -2,7 +2,7 @@ define apache::vhost () {
 	
 	file { "/etc/apache2/sites-available/${title}.com.conf":
 		content => template("apache/palikka.com.conf.erb"),
-               #notify => Service["apache2"],
+		#notify => Class["apache"],
                #require => Package["apache2"],
         }
 
