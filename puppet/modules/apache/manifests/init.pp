@@ -9,6 +9,5 @@ class apache {
                 enable => "true",
                 provider => "systemd",
                 require => Package["apache2"],
-#		subscribe => File["/etc/apache2/sites-enabled/palikka.com.conf"],
         }
 }
